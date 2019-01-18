@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans>
+    <bean name="children" class="com.itgood.entities.Children">
+        <property name="name" value="bob"></property>
+        <property name="age" value="12"></property>
+    </bean>
+
+    <bean name="parent" class="com.itgood.entities.Parent">
+        <property name="name" value="BobOne"></property>
+        <property name="children" ref="children"></property>
+    </bean>
+
+    <bean name="persion" class="com.itgood.entities.Persion">
+        <property name="name" value="BobTwo"></property>
+        <property name="children" ref="children"></property>
+        <property name="parent" ref="parent"></property>
+    </bean>
+</beans>
